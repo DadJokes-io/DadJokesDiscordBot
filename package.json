@@ -1,0 +1,35 @@
+{
+  "name": "dadjokesdiscordbot",
+  "version": "1.0.0",
+  "description": "discord bot for dadjokes api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node lib",
+    "dev": "npm run build && node lib",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "precommit": "npm run lint && npm run format",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit",
+      "pre-push": "npm test"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/ws": "^7.2.7",
+    "axios": "^0.20.0",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "fetch": "^1.1.0",
+    "prettier": "^2.1.2",
+    "tslint": "^6.1.3",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.8"
+  }
+}
